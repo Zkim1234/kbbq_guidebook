@@ -18,6 +18,17 @@
   background: #f5f5f1;
 }
 
+.landingPageLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
+
+.mainPageLayer {
+  position: relative;
+  z-index: 10;
+}
+
 .deviceViewport::-webkit-scrollbar {
   display: none;
 }
@@ -69,9 +80,7 @@
 }
 
 .contentArea {
-  position: sticky;
-  top: 5rem;
-  z-index: 10;
+  position: relative;
   min-height: 180dvh;
   background: #f5f5f1;
 }

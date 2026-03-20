@@ -5,9 +5,19 @@ export default function CookButtonCard({
   duration,
   heading,
   description,
+  backgroundImage,
+  backgroundPosition = "left bottom",
+  backgroundSize = "contain",
 }) {
   return (
-    <article className={styles.card}>
+    <article
+      className={styles.card}
+      style={{
+        "--card-bg-image": backgroundImage ? `url(${backgroundImage})` : "none",
+        "--card-bg-position": backgroundPosition,
+        "--card-bg-size": backgroundSize,
+      }}
+    >
       <div className={styles.topRow}>
         <span className={styles.categoryTag}>{category}</span>
         <p className={styles.durationText}>Duration: {duration}</p>

@@ -5,7 +5,11 @@
   padding: 1.25rem 1rem;
   border-radius: 1.4rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background-color: #fff;
+  background-image: var(--card-bg-image, none);
+  background-position: var(--card-bg-position, left bottom);
+  background-size: var(--card-bg-size, contain);
+  background-repeat: no-repeat;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;

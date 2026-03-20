@@ -7,6 +7,7 @@ export default function BestComboButtonCard({
 }) {
   return (
     <article className={styles.card}>
+      
       <div className={styles.topRow}>
         <span className={styles.categoryTag}>{category}</span>
       </div>
