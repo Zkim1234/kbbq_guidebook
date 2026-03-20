@@ -1,0 +1,45 @@
+.tagWrapper {
+  position: sticky;
+  top: 5rem;
+  z-index: 14;
+  background: #f5f5f1;
+  padding: 0.75rem 1rem;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tagRow::-webkit-scrollbar {
+  display: none;
+}
+
+.tagSelected,
+.tagUnselected {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 0.3125rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  font: inherit;
+  cursor: pointer;
+}
+
+.tagSelected {
+  background: var(--sand-beige, #c3a68c);
+  color: #fff;
+}
+
+.tagUnselected {
+  background: #fff;
+}
