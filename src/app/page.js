@@ -97,8 +97,9 @@ export default function Home() {
               {showBestCombinations && (
                 <BestComboButtonCard
                   category="Best Combination"
-                  heading="Cold Noodles with Marinated Meats"
+                  heading="Lettuce Wrap 쌈"
                   description="Best combination out of everything that not a lot of new visitor does not know."
+                  howToCookHref="/best-combo"
                 />
               )}
               {showSauces && (
