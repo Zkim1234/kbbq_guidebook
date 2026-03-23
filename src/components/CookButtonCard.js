@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./CookButtonCard.module.css";
 
 export default function CookButtonCard({
@@ -5,6 +6,8 @@ export default function CookButtonCard({
   duration,
   heading,
   description,
+  howToCookHref,
+  ctaLabel = "How to cook →",
   backgroundImage,
   backgroundPosition = "left bottom",
   backgroundSize = "contain",
@@ -28,9 +31,15 @@ export default function CookButtonCard({
         <p className={styles.description}>{description}</p>
       </div>
 
-      <button type="button" className={styles.howToCookButton}>
-        How to cook →
-      </button>
+      {howToCookHref ? (
+        <Link href={howToCookHref} className={styles.howToCookButton}>
+          {ctaLabel}
+        </Link>
+      ) : (
+        <button type="button" className={styles.howToCookButton}>
+          {ctaLabel}
+        </button>
+      )}
     </article>
   );
 }

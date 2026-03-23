@@ -88,6 +88,7 @@ export default function Home() {
                   duration="10 - 15 min"
                   heading="Pork Belly 삼겹살"
                   description="Cook over medium-high heat until browned and juicy."
+                  howToCookHref="/meats"
                   backgroundImage="/button-card-images/button-raw-pork-belly.jpg"
                   backgroundPosition="left bottom"
                   backgroundSize="contain"
