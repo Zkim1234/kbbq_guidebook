@@ -105,9 +105,10 @@ export default function Home() {
               {showSauces && (
                 <Card
                   cardType="sauce"
-                  category="Dipping Sauce"
+                  category="Dipping Sauces"
                   heading="General Dipping Sauce"
                   description="Sesame oil with salt and pepper & Ssamjang (mixture of Bean paste + Chili paste)"
+                  href="/sauces"
                 />
               )}
             </div>

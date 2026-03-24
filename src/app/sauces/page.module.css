@@ -1,0 +1,122 @@
+.outerShell {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #bdbdbd;
+  padding: 1rem;
+}
+
+.deviceViewport {
+  position: relative;
+  width: min(100vw, 27.5rem);
+  height: min(100dvh, 59.75rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background: #f5f5f1;
+}
+
+.deviceViewport::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  min-height: 100dvh;
+  background: #f5f5f1;
+  padding: 1.25rem 1rem 2rem;
+  color: #171717;
+}
+
+.container {
+  width: min(100%, 27.5rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backLink {
+  width: fit-content;
+  font-size: 0.9rem;
+  color: #5d866c;
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: rgba(23, 23, 23, 0.75);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.625rem;
+  background: #e1e1e1;
+  padding: 0.375rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.imageStage {
+  position: relative;
+  width: 74%;
+  max-width: 16.5rem;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.stageImage {
+  object-fit: contain;
+}
+
+.infoBox {
+  border-radius: 0.85rem;
+  background: #c3a68c;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.infoHeading {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.sauceList {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sauceItem {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 440px) {
+  .outerShell {
+    padding: 0;
+  }
+
+  .deviceViewport {
+    width: 100vw;
+    height: 100dvh;
+  }
+}
