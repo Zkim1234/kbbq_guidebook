@@ -54,6 +54,20 @@
   color: rgba(23, 23, 23, 0.75);
 }
 
+.detailInlineButton {
+  display: inline;
+  width: fit-content;
+  border: 1px solid rgba(23, 23, 23, 0.2);
+  background: #fff;
+  color: #171717;
+  border-radius: 1rem;
+  padding: 0.2rem 0.7rem;
+  margin-left: 0.2rem;
+  vertical-align: baseline;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
 .metaRow {
   display: flex;
   align-items: center;
@@ -78,8 +92,8 @@
 
 .wrapStage {
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 74%;
+  max-width: 16.5rem;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
 }

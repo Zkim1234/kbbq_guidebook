@@ -6,9 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "./page.module.css";
 import NavBar from "../components/NavBar";
 import TagFilter from "../components/TagFilter";
-import CookButtonCard from "../components/CookButtonCard";
-import BestComboButtonCard from "../components/BestComboButtonCard";
-import DippingSauceButtonCard from "../components/DippingSauceButtonCard";
+import Card from "../components/Card";
 
 export default function Home() {
   const pageRef = useRef(null);
@@ -83,27 +81,30 @@ export default function Home() {
           <section className={styles.contentArea}>
             <div className={styles.contentInner}>
               {showMeats && (
-                <CookButtonCard
+                <Card
+                  cardType="cook"
                   category="Pork"
                   duration="10 - 15 min"
                   heading="Pork Belly 삼겹살"
                   description="Cook over medium-high heat until browned and juicy."
-                  howToCookHref="/meats"
+                  href="/meats"
                   backgroundImage="/button-card-images/button-raw-pork-belly.jpg"
                   backgroundPosition="left bottom"
                   backgroundSize="contain"
                 />
               )}
               {showBestCombinations && (
-                <BestComboButtonCard
+                <Card
+                  cardType="bestCombo"
                   category="Best Combination"
                   heading="Lettuce Wrap 쌈"
                   description="Best combination out of everything that not a lot of new visitor does not know."
-                  howToCookHref="/best-combo"
+                  href="/best-combo"
                 />
               )}
               {showSauces && (
-                <DippingSauceButtonCard
+                <Card
+                  cardType="sauce"
                   category="Dipping Sauce"
                   heading="General Dipping Sauce"
                   description="Sesame oil with salt and pepper & Ssamjang (mixture of Bean paste + Chili paste)"

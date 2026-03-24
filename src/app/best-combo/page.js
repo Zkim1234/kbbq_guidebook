@@ -45,7 +45,12 @@ const WRAP_STEPS = [
 
 export default function BestCombo() {
   const [activeStep, setActiveStep] = useState(0);
+  const [showDetail, setShowDetail] = useState(false);
   const lastStepIndex = WRAP_STEPS.length - 1;
+  const shortDescription =
+    "The quintessential Kbbq experience wraps grilled meat in crisp lettuce.";
+  const fullDescription =
+    "The quintessential Kbbq experience is incomplete without wrapping a juicy piece of grilled meat in a crisp lettuce leaf, along with a spoonful of rice and a dab of ssamjang.";
 
   useEffect(() => {
     if (activeStep >= lastStepIndex) {
@@ -80,12 +85,18 @@ export default function BestCombo() {
 
             <h1 className={styles.title}>Best Combo: Lettuce Wrap 쌈</h1>
             <p className={styles.subtitle}>
-                The quintessential Kbbq experience is incomplete without wrapping a juicy piece of grilled meat in a crisp lettuce leaf, along with a spoonful of rice and a dab of ssamjang.
+              {showDetail ? fullDescription : shortDescription}{" "}
+              <button
+                type="button"
+                className={styles.detailInlineButton}
+                onClick={() => setShowDetail((previous) => !previous)}
+              >
+                {showDetail ? "Hide detail" : "Detail"}
+              </button>
             </p>
 
             <div className={styles.metaRow}>
               <span className={styles.badge}>Best Combination</span>
-              <span className={styles.duration}>Duration: 15 - 20 sec</span>
             </div>
 
             <div className={styles.wrapStage}>
